@@ -1,0 +1,26 @@
+{
+  "name": "Saad-s-Server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Develop a NodeJs Server",
+  "keywords": [
+    "Node.js",
+    "GCI",
+    "OpenMRS",
+    "JavaScript"
+  ],
+  "author": "Saad Khaleeq",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saadkhaleeq610/GCI-NodeJs-Server/"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "underscore": "^1.9.1"
+  }
+}
