@@ -18,10 +18,13 @@ app.get('/products/:productId', (req, res) => {
 
 app.get('/category/:ctyId', (req, res) => {
   let data = dataService.getCombinedProductMap();
-  res.send(data.reduce((acc, pro) => {
-    if (pro.categoryId === req.params.ctyId) 
-      acc.push(pro);
-  }, []));
+  var filteredProducts = []
+  for (product of data) {
+    if (product[1].categoryId === req.params.ctyId) {
+        filteredProducts.push(product[1]);
+    }
+  }
+  res.send(filteredProducts);
 });
 
 
