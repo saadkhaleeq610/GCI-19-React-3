@@ -11,15 +11,15 @@ app.get('/products/all', (req, res) => {
 });
 
 app.get('/products/:productId', (req, res) => {
-  let data = dataService.getCombinedProductMap();
-  res.send(data.get(req.params.productId));
+  const products = dataService.getCombinedProductMap();
+  res.send(products.get(req.params.productId));
 });
 
 
 app.get('/category/:ctyId', (req, res) => {
-  let data = dataService.getCombinedProductMap();
+  const products = dataService.getCombinedProductMap();
   var filteredProducts = []
-  for (product of data) {
+  for (product of products) {
     if (product[1].categoryId === req.params.ctyId) {
         filteredProducts.push(product[1]);
     }
